@@ -3,7 +3,7 @@
  * Styles for breadcrumbs.
  */
 
-.breadcrumb {
+ .breadcrumb {
   padding-bottom: 0.5em;
 }
 .breadcrumb ol {
@@ -22,8 +22,26 @@
 }
 /* IE8 does not support :not() and :last-child. */
 .breadcrumb li::before {
-  content: " \BB ";
+  content: none; /* Remove the default separator */
 }
 .breadcrumb li:first-child::before {
   content: none;
+}
+
+/* Custom styles for breadcrumbs */
+.breadcrumb li a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb li::after {
+  content: " / "; /* Add a new separator */
+}
+
+.breadcrumb li:last-child::after {
+  content: none; /* Remove the separator after the last item */
 }

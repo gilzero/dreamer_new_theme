@@ -3,7 +3,7 @@
  * Visual styles for menu.
  */
 
-ul.menu {
+ ul.menu {
   margin-left: 1em; /* LTR */
   padding: 0;
   list-style: none outside;
@@ -31,4 +31,95 @@ ul.menu {
 }
 ul.menu a.is-active {
   color: #000;
+}
+
+/* Custom styles for the primary menu */
+nav[aria-label="Main navigation"] ul.menu {
+  background-color: #333; /* Dark gray background */
+  padding: 10px;
+  margin-left: 0; /* Override default margin */
+}
+[dir="rtl"] nav[aria-label="Main navigation"] ul.menu {
+  margin-right: 0; /* Override default margin */
+}
+
+nav[aria-label="Main navigation"] ul.menu li {
+  display: inline-block;
+  margin-right: 0; /* Override default margin */
+}
+[dir="rtl"] nav[aria-label="Main navigation"] ul.menu li {
+  margin-left: 0; /* Override default margin */
+}
+
+nav[aria-label="Main navigation"] ul.menu li a {
+  color: #fff; /* White text color */
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+nav[aria-label="Main navigation"] ul.menu li a:hover {
+  background-color: #555; /* Slightly lighter gray on hover */
+  text-decoration: none;
+}
+
+/* Custom styles for the secondary menu */
+nav[aria-label="Secondary navigation"] ul.menu {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 5px;
+  border-bottom: 1px solid #ccc; /* Add a border */
+  margin-left: 0; /* Override default margin */
+}
+[dir="rtl"] nav[aria-label="Secondary navigation"] ul.menu {
+  margin-right: 0; /* Override default margin */
+}
+
+nav[aria-label="Secondary navigation"] ul.menu li {
+  display: inline-block;
+  margin-right: 0; /* Override default margin */
+}
+[dir="rtl"] nav[aria-label="Secondary navigation"] ul.menu li {
+  margin-left: 0; /* Override default margin */
+}
+
+nav[aria-label="Secondary navigation"] ul.menu li a {
+  color: #333; /* Dark gray text color */
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+nav[aria-label="Secondary navigation"] ul.menu li a:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
+  text-decoration: none;
+}
+
+/* Custom styles for the footer menu */
+nav[aria-labelledby="block-dreamer-new-theme-footer-menu-menu"] {
+  background-color: #eee; /* Light gray background */
+  padding: 10px;
+  border-top: 1px solid #ccc; /* Add a top border */
+}
+
+nav[aria-labelledby="block-dreamer-new-theme-footer-menu-menu"] ul.menu {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove list styles */
+}
+
+nav[aria-labelledby="block-dreamer-new-theme-footer-menu-menu"] ul.menu li {
+  display: inline-block;
+  margin-right: 10px; /* Add spacing between links */
+}
+[dir="rtl"] nav[aria-labelledby="block-dreamer-new-theme-footer-menu-menu"] ul.menu li {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+nav[aria-labelledby="block-dreamer-new-theme-footer-menu-menu"] ul.menu li a {
+  color: #555; /* Gray link color */
+  font-size: 0.9em; /* Adjust font size */
+  text-decoration: none;
+}
+
+nav[aria-labelledby="block-dreamer-new-theme-footer-menu-menu"] ul.menu li a:hover {
+  text-decoration: underline;
 }

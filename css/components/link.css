@@ -3,13 +3,18 @@
  * Style another element as a link.
  */
 
-button.link {
+ button.link {
   margin: 0;
   padding: 0;
   cursor: pointer;
   border: 0;
   background: transparent;
   font-size: 1em;
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
+}
+button.link:hover {
+  text-decoration: underline; /* Add underline on hover */
 }
 label button.link {
   font-weight: bold;

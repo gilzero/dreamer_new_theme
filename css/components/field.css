@@ -3,8 +3,9 @@
  * Visual styles for fields.
  */
 
-.field__label {
+ .field__label {
   font-weight: bold;
+  margin-bottom: 0.25em; /* Add margin below labels */
 }
 .field--label-inline .field__label,
 .field--label-inline .field__items {
@@ -22,4 +23,19 @@
 }
 .field--label-inline .field__label::after {
   content: ":";
+}
+
+/* Custom styles for all fields */
+.field {
+  border: 1px solid #eee; /* Add a subtle border */
+  padding: 0.5em; /* Add padding */
+  margin-bottom: 1em; /* Add margin below fields */
+}
+
+.field__items {
+  padding-top: 0.25em; /* Add padding above field items */
+}
+
+.field__item {
+  padding-bottom: 0.25em; /* Add padding below field items */
 }

@@ -1,0 +1,31 @@
+/* css/global.css */
+
+body {
+  background-color: #ffa500; /* Netherlands Orange */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Custom styles for the branding block */
+header[role="banner"] {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+header[role="banner"] .site-logo img {
+  max-height: 50px; /* Adjust logo size */
+  margin-right: 10px; /* Add spacing between logo and name */
+}
+
+header[role="banner"] .site-name a {
+  font-size: 1.5em; /* Adjust site name font size */
+  color: #333; /* Dark gray site name color */
+  text-decoration: none;
+}
+
+header[role="banner"] .site-slogan {
+  font-size: 1em; /* Adjust site slogan font size */
+  color: #777; /* Gray site slogan color */
+  margin-left: 10px;
+}

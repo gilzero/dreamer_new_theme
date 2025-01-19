@@ -42,46 +42,75 @@
  * @see html.html.twig
  */
 #}
+{{ attach_library('dreamer_new_theme/global') }}
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 <div class="layout-container">
 
   <header role="banner">
-    {{ page.header }}
+    {% if page.header %}
+      {{ page.header }}
+    {% endif %}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  {% if page.primary_menu %}
+    <nav role="navigation" aria-label="{{ 'Main navigation'|t }}">
+      {{ page.primary_menu }}
+    </nav>
+  {% endif %}
 
-  {{ page.breadcrumb }}
+  {% if page.secondary_menu %}
+    <nav role="navigation" aria-label="{{ 'Secondary navigation'|t }}">
+      {{ page.secondary_menu }}
+    </nav>
+  {% endif %}
 
-  {{ page.highlighted }}
-
-  {{ page.help }}
+  {% if page.breadcrumb %}
+    {{ page.breadcrumb }}
+  {% endif %}
 
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
+    <a id="main-content" tabindex="-1"></a>{# link is added to support keyboard navigation #}
+    {% if page.highlighted %}
+      <div class="layout-highlighted">
+        {{ page.highlighted }}
+      </div>
     {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
+    {% if page.help %}
+      {{ page.help }}
     {% endif %}
-
+    {{ page.content }}
   </main>
 
-  {% if page.footer %}
+  {% if page.sidebar_first %}
+    <aside class="layout-sidebar-first" role="complementary">
+      {{ page.sidebar_first }}
+    </aside>
+  {% endif %}
+
+  {% if page.sidebar_second %}
+    <aside class="layout-sidebar-second" role="complementary">
+      {{ page.sidebar_second }}
+    </aside>
+  {% endif %}
+
+  {% if page.footer or page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
     <footer role="contentinfo">
-      {{ page.footer }}
+      {% if page.footer %}
+        {{ page.footer }}
+      {% endif %}
+      {% if page.footer_first %}
+        {{ page.footer_first }}
+      {% endif %}
+      {% if page.footer_second %}
+        {{ page.footer_second }}
+      {% endif %}
+      {% if page.footer_third %}
+        {{ page.footer_third }}
+      {% endif %}
+      {% if page.footer_fourth %}
+        {{ page.footer_fourth }}
+      {% endif %}
     </footer>
   {% endif %}
 
-</div>{# /.layout-container #}
+</div>

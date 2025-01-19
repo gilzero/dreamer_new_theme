@@ -3,6 +3,13 @@
  * Visual styles for nodes.
  */
 
-.node--unpublished {
-  background-color: #fff4f4;
+ .node--unpublished {
+  background-color: #fdeeee; /* Slightly darker red for unpublished nodes */
+}
+
+/* Custom styles for all nodes */
+.node {
+  border: 1px solid #ccc; /* Add a border */
+  padding: 1em; /* Add padding */
+  margin-bottom: 1em; /* Add margin below nodes */
 }
