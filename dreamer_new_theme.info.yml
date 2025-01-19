@@ -1,0 +1,22 @@
+name: 'Dreamer Dreamer Theme'
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - dreamer_new_theme/base
+  - dreamer_new_theme/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - dreamer_new_theme/user
+  core/drupal.dropbutton:
+    - dreamer_new_theme/dropbutton
+  core/drupal.dialog:
+    - dreamer_new_theme/dialog
+  file/drupal.file:
+    - dreamer_new_theme/file
+  core/drupal.progress:
+    - dreamer_new_theme/progress
+description: 'Custom theme for AI Dreamer'
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.1.1'
